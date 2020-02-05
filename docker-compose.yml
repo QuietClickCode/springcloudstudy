@@ -1,0 +1,56 @@
+version: "3.6"
+services:
+  eureka-server:
+    container_name: eureka-server
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    network_mode: "host"
+  config-server:
+    container_name: config-server
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    network_mode: "host"
+  config-client:
+    container_name: config-client
+    build:
+      context: ./config-client
+    network_mode: "host"
+    ports:
+      - "8881:8881"
+  service-feign:
+    container_name: service-feign
+    build:
+      context: ./service-feign
+    network_mode: "host"
+    ports:
+      - "8765:8765"
+  service-hi:
+    container_name: service-hi
+    build:
+      context: ./service-hi
+    network_mode: "host"
+    ports:
+      - "8763:8763"
+  service-zuul:
+    container_name: service-zuul
+    build:
+      context: ./service-zuul
+    network_mode: "host"
+    ports:
+      - "8769:8769"
+  service-ribbon:
+    container_name: service-ribbon
+    build:
+      context: ./service-ribbon
+    network_mode: "host"
+    ports:
+      - "8764:8764"
+
+
+
