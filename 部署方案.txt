@@ -1,0 +1,210 @@
+hexo:3000
+微信公众号80端口
+
+80:后台服务 www.myznsh.com  8888也可以
+8080/magnetw_war/磁力链
+8081:AISearch  后台管理 vue-element-admin
+8082:
+8083:图床
+内网穿透
+8084:博客 frp转发到本机8084
+8085:转发到树莓派8080(博客)
+8086:转发到树莓派22 sftp服务
+8087:转发到树莓派5900(默认)端口 vnc服务
+8088:转发到树莓派21(默认)端口 ftp服务 不可用
+8089:zb-blog博客
+7000:frp端口
+这是阿里云的8091:jenkins	是yum安装的   密码为 
+微信公众号端口:8080
+8092:jenkins
+admin zjj123456
+父模块:
+ace-security
+子模块:
+    <modules>
+        <module>ace-gate</module>
+        <module>ace-common</module>
+        <module>ace-auth</module>
+        <module>ace-sidecar</module>
+        <module>ace-control</module>
+        <module>ace-modules</module>
+    </modules>
+ace-auth模块"
+子模块:
+    <modules>
+        <module>ace-auth-client</module>
+        <module>ace-auth-server</module>
+        <module>ace-auth-common</module>
+    </modules>
+	
+	jenkins token:
+	 fcca004bb3ac1762724200943a9035c0b6dfcde7
+
+	 
+	 jenkins github token
+	 
+	 0def77d36f0509afd05fccb5589a6bb6923590f0
+
+	 
+	 2020年1月15日21:13:19
+	 
+	 vue-cli在linux /java/dist目录下
+	 
+	 nginx 在/usr/local/nginx
+	 
+	 启动es的用户elsearch
+	 
+	 pm2 start hexo_run.js
+	 
+	 es启动不起来https://www.cnblogs.com/yidiandhappy/p/7714489.html	
+	 
+	 
+	 8080AISearch后台服务
+	 80前台界面
+	 
+	 域名没有备案下来之前就 用8888这个端口,前台界面	
+	 
+	 
+	 2020年1月17日17:59:07
+	 
+	 es分了300m,看行不行,必须的512m
+	 
+	 
+	 不得不花400升级配置了 2g->4g
+	 
+	 以后AISearch的根目录就在这里了:/var/lib/jenkins/workspace/testAISearch
+	 
+	 
+	 
+	 微信公众号:
+	 appid:wx9dea0c85f1f560da
+	 appSecret:21bc800e66535faf019f9c4142db9124
+	 
+	 centos  64位 192.168.48.130 hadoop集群 6.5
+	 centos2 192.168.48.131 hadoop集群 6.5
+	 centos3 192.168.48.132 hadoop集群 6.5
+	 cent 192.168.48.13 docker集群 7
+	 cent2 192.168.48.134 docker集群 7 
+	 cent3 192.168.48.135 docker集群 7
+	 
+	 2020年2月1日22:40:11
+	 进入docker
+	 docker exec -it 775c7c9ee1e1 /bin/sh  
+	 
+	 mvn clean package dockerfile:build
+	 
+	 docker run -idt -p 8761:8761 --name eureka-server springcloudstudy_eureka-server
+	 docker run -it -p 8761:8761 --name eureka-server springcloudstudy_eureka-server
+	 
+	 docker run -idt -p 8888:8888 --name config-server springcloudstudy_config-server
+	 docker run -it -p 8888:8888 --name config-server springcloudstudy_config-server
+	 
+	 docker run -idt -p 8881:8881 --name config-client springcloudstudy_config-client
+	 docker run -it -p 8881:8881 --name config-client springcloudstudy_config-client
+	 
+	 
+	 docker run -idt -p 8765:8765 --name service-feign springcloudstudy_service-feign
+	 docker run -it -p 8765:8765 --name service-feign springcloudstudy_service-feign
+	 
+	 
+	 docker run -idt -p 8763:8763 --name service-hi springcloudstudy_service-hi
+	 docker run -it -p 8763:8763 --name service-hi springcloudstudy_service-hi
+	 
+	 
+	 docker run -idt -p 8769:8769 --name service-zuul springcloudstudy_service-zuul
+	 docker run -it -p 8769:8769 --name service-zuul springcloudstudy_service-zuul
+	 
+	 
+	 docker run -idt -p 8764:8764 --name service-ribbon springcloudstudy_service-ribbon
+	 docker run -it -p 8764:8764 --name service-ribbon springcloudstudy_service-ribbon
+	 
+	 
+	 
+	 docker run -idt -p 8761:8761 --name eureka-server eureka-server:0.0.1-SNAPSHOT
+	 docker run -idt -p 8888:8888 --name config-server config-server:0.0.1-SNAPSHOT
+	 
+	 docker run -idt -p 8881:8881 --name config-client config-client:0.0.1-SNAPSHOT
+	 docker run -idt -p 8765:8765 --name service-feign service-feign:0.0.1-SNAPSHOT
+	 docker run -idt -p 8763:8763 --name service-hi service-hi:0.0.1-SNAPSHOT
+	 docker run -idt -p 8769:8769 --name service-zuul service-zuul:0.0.1-SNAPSHOT
+	 docker run -idt -p 8764:8764 --name service-ribbon service-ribbon:0.0.1-SNAPSHOT
+
+	 <!--Docker maven plugin-->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.10</version>
+				<configuration>
+					<repository>${project.artifactId}</repository>
+					<contextDirectory>./</contextDirectory>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+			</plugin>
+			
+			
+			停止所有容器
+			docker stop $(docker ps -aq)
+			删除所有镜像
+			docker rmi $(docker images -q)
+
+构建镜像			
+			docker build -t springcloudstudy_eureka-server .
+
+
+作者：POPMUISE
+链接：https://www.imooc.com/article/details/id/32810
+来源：慕课网
+
+https://www.imooc.com/article/details/id/32810
+
+docker 删除所有操作
+
+容器docker rm $(docker ps -aq)
+
+作者：POPMUISE
+链接：https://www.imooc.com/article/details/id/32810
+来源：慕课网
+
+镜像
+	
+
+作者：POPMUISE
+链接：https://www.imooc.com/article/details/id/32810
+来源：慕课网
+
+镜像加速
+https://av2ool9w.mirror.aliyuncs.com
+
+
+2020年2月4日11:54:22
+
+elasticsearch
+GET _cat/indices  查看所有索引
+
+wordpress 密码为
+O7xVSBHdmCescU2!Tj9twb%f
+
+
+
+mongodb
+
+docker run -itd --name mongo -p 27017:27017 mongo --auth
+
+ docker exec -it mongo mongo admin
+ 
+  db.createUser({ user:'admin',pwd:'123456',roles:[ { role:'userAdminAnyDatabase', db: 'admin'}]});
+  
+  db.auth('admin', '123456')
+  
+  
+  
+  mongodb dqZpLP4LfgQYNj*密码 zhu jj 2572417548@qq.com
+  内网穿透 ngork
+  3fb950a079d7d436
+  
+  fastDFS
+  tracker 6666 22122
+  storager 9999 23000
