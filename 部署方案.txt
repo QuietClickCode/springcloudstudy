@@ -17,7 +17,8 @@ hexo:3000
 这是阿里云的8091:jenkins	是yum安装的   密码为 
 微信公众号端口:8080
 8092:jenkins
-admin zjj123456
+admin 1a2c6b49a059440fbaebcd175e6bdb8b
+
 父模块:
 ace-security
 子模块:
