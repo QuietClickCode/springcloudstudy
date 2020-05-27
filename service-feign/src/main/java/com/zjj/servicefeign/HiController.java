@@ -17,6 +17,11 @@ public class HiController {
     public String sayHi(@RequestParam(value = "name", defaultValue = "zjj") String name) {
         return schedualServiceHi.sayHiFromClientOne( name );
     }
+
+    @GetMapping(value = "/uploadToHadoop")
+    public String uploadToHadoop() {
+        return schedualServiceHi.uploadToHadoop();
+    }
 }
 
 
