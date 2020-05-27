@@ -10,7 +10,7 @@ public interface SchedualServiceHi {
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 
-    @RequestMapping(value = "/uploadToHadoop",method = RequestMethod.GET)
+    @RequestMapping(value = "/uploadtohadoop",method = RequestMethod.GET)
     String uploadToHadoop();
 }
 

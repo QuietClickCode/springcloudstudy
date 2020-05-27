@@ -18,8 +18,9 @@ public class HiController {
         return schedualServiceHi.sayHiFromClientOne( name );
     }
 
-    @GetMapping(value = "/uploadToHadoop")
+    @GetMapping(value = "/uploadtohadoop")
     public String uploadToHadoop() {
+        System.out.println("hiController");
         return schedualServiceHi.uploadToHadoop();
     }
 }

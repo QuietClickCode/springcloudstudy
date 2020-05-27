@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 熔断
+
  */
 @Component
 public class SchedualServiceHiHystric implements SchedualServiceHi {
